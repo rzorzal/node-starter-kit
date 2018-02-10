@@ -1,0 +1,27 @@
+{
+    "development": {
+        "database": "DATABASENAME",
+        "username": "USERNAME",
+        "password": "PASSWORD",
+        "host":     "localhost",
+        "dialect":  "postgres",
+        "dummy":    "DUMMY_DATABASE_URL"
+    },
+    "test": {
+        "dialect": "sqlite",
+        "storage": "./db.test.sqlite"
+    },
+    "production": {
+        "connection_env": "ENV_DATABASE",
+        "dialect": "postgres",
+        "dummy_env":   "ENV_DUMMY_DATABASE"
+    },
+    "cloudinary": {
+        "cloud_name": "CLOUDNARY_NAME",
+        "api_key": "CLOUDNARY_KEY",
+        "api_secret": "CLOUDNARY_SECRETE"
+    },
+    "sendgrid": {
+        "api_key": "SENDGRID_KEY"
+    }
+}

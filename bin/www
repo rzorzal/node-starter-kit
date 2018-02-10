@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+var moment = require('moment');
+var momentPT = require('moment/locale/pt-br');
+
+moment.locale('pt-br');
+
+var initServer = async function(models, env, server, config){
+    console.log(`================= SERVER SET TO ${env.toUpperCase()} ENV =================`);
+    //EM PRODUÇÃO A ATUALIZAÇÃO DO BANCO DE DADOS SE DA NA HORA DE LANÇAR OS APPS
+    if(env.toUpperCase() == "development".toUpperCase()){
+        await require(`${process.cwd()}/utils/syncDataBase.js`)();
+    }
+
+    server.on('error', onError);
+    server.on('listening', onListening);
+
+    server.listen(port);
+    console.log("============ SERVER INITIALIZED ============");
+}
+
+
+var fs        = require("fs");
+var path      = require("path");
+var env       = process.env.NODE_ENV || "development";
+var config    = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
+var app = require('../app');
+var debug = require('debug')('init:server');
+var http = require('http');
+var models = require("../models");
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+var server = http.createServer(app);
+
+initServer(models, env, server, config);
+
+
+function normalizePort(val) {
+    return val;
+}
+function onError(error) {
+    debug("ERROR: " + error);
+}
+function onListening() {
+    debug("Server is listening...");
+}

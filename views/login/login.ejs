@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Node Skeleton</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/plugins/iziToast/dist/css/iziToast.min.css">
+
+    <link rel="shortcut icon" href="/image/favicon.ico">
+
+</head>
+
+<body class="hold-transition skin-blue layout-top-nav">
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <section class="content">
+                <div class="row">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <div class="col-sm-11 col-sm-offset-1 hid">
+                        <div class="row">
+                            <div class="col-sm-5 col-sm-offset-3 text-center ">
+                                <div class="box box-danger">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">
+                                            <img src="" class="img-rounded" alt="LOGO EMPRESA">
+                                        </h3>
+                                    </div>
+                                    <form class="form-horizontal" action='/login' method='post'>
+                                        <div class="box-body">
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label">Login</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="login" placeholder="usuario" name="usuario">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="senha" placeholder="senha" name="senha">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <div class="pull-left">
+                                                    <a type="button" data-toggle="modal" href="#" data-target="#recuperarSenha">Esqueci a senha</a>
+                                                </div>
+                                            </div>
+                                            <div class="box-footer">
+                                                <button type="submit" id="botaoEnviar" class="btn btn-warning pull-right">Entrar</button>
+                                            </div>
+                                            <!-- /.box-footer -->
+                                    </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+            </section>
+            <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Versão</b> 1.0
+                </div>
+                <strong>Copyright &copy; 2017 <a href="#">GCB</a>.</strong> Todos os direitos reservados.
+            </footer>
+
+            <div class="modal modal-default fade" id="recuperarSenha" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 class="modal-title">Recuperar Senha</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form autocomplete="false" action="/" method="POST">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="control-label">Email:</label>
+                                    <input name="email" type="text" class="form-control" id="emailModal" placeholder="funcionario@cesta.com.br" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="control-label">Login:</label>
+                                    <input name="login" type="text" class="form-control" id="loginModal" placeholder="funcionario" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  pull-left" data-dismiss="modal">Fechar</button>
+                                    <button type="submit"  class="btn btn-warning">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- jQuery 2.2.3 -->
+            <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <script src="dist/js/app.min.js"></script>
+            <!-- AdminLTE for demo purposes -->
+            <script src="/plugins/iziToast/dist/js/iziToast.min.js" charset="utf-8"></script>
+            <script src="/dist/js/query.parser.js" charset="utf-8"></script>
+            <script src="/dist/js/notification.js" charset="utf-8"></script>
+
+            <script>
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
