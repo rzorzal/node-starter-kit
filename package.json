@@ -41,7 +41,7 @@
     "request-promise": "^4.2.1",
     "require-dir-all": "^0.4.12",
     "sendgrid": "^5.2.3",
-    "sequelize": "^3.30.4",
+    "sequelize": "^5.15.1",
     "sequelize-cli": "^3.0.0",
     "sequelize-sync-diff": "^0.2.3",
     "serve-favicon": "^2.4.3",
